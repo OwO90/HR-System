@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int reportType;
+    string employees[] = {"Ali", "Sara", "Omar", "Lina"};
+    cout << "Select report type:\n1. List Employees\n2. Count Employees\n";
+    cin >> reportType;
+    switch (reportType) {
+        case 1:
+            cout << "Employee Names:\n";
+            for (int i = 0; i < 4; i++) {
+                cout << employees[i] << endl;
+            }
+            break;
+        case 2:
+            cout << "Total Employees: ";
+            cout << sizeof(employees) / sizeof(employees[0]) << endl;
+            break;
+        default:
+            cout << "Invalid option.\n";
+    }
+    return 0;
+}
